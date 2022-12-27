@@ -51,11 +51,11 @@ struct URLImage: View {
 }
 
 struct StudentListView: View {
-  @ObservedObject var viewModel: StudentListViewModel
-
+  @EnvironmentObject var viewModelFactory: ViewModelFactory
+  
     var body: some View {
       NavigationView{
-        List(viewModel.students) { student in
+        List(viewModelFactory.studentList) { student in
           HStack{
             URLImage(urlString: student.imageUrl)
             VStack(alignment: .leading) {
@@ -74,6 +74,6 @@ struct StudentListView: View {
 
 struct StudentListView_Previews: PreviewProvider {
     static var previews: some View {
-      StudentListView(viewModel: StudentListViewModel(viewModelFactory: ViewModelFactory()))
+      StudentListView()
     }
 }

@@ -15,10 +15,7 @@ final class NewStudentViewModel: ObservableObject {
   @Published var showingImagePicker: Bool
   @Published var showDetails: Bool
 
-  private let viewModelFactory: ViewModelFactory
-
-  init(viewModelFactory: ViewModelFactory) {
-    self.viewModelFactory = viewModelFactory
+  init() {
     self.showingImagePicker = false
     self.showDetails = false
   }
@@ -28,7 +25,7 @@ final class NewStudentViewModel: ObservableObject {
     if let img = uiimage, let imageUrl = imagePath {
       ImagePicker.storeImage(urlString: imageUrl, img: img)
     }
-    viewModelFactory.add(Student(name: name, imageUrl: imagePath!, mobileNumber: mobileNumber))
+   
     self.showDetails = true
   }
   
@@ -82,10 +79,6 @@ final class NewStudentViewModel: ObservableObject {
   
   private func hideKeyboard() {
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-  }
-  
-  func makeToStudentListViewModel() -> StudentListViewModel {
-    return StudentListViewModel(viewModelFactory: viewModelFactory)
   }
   
 }

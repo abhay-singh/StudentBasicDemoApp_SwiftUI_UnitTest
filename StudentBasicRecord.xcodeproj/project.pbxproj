@@ -18,11 +18,9 @@
 		90001675295221EE0080137B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90001674295221EE0080137B /* ImagePicker.swift */; };
 		90001677295228AF0080137B /* StudentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90001676295228AF0080137B /* StudentListView.swift */; };
 		9000167F29523E6B0080137B /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000167E29523E6B0080137B /* ViewModelFactory.swift */; };
-		90001681295252E40080137B /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90001680295252E40080137B /* StudentListViewModel.swift */; };
 		9000168B2959713B0080137B /* StudentBasicRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000168A2959713B0080137B /* StudentBasicRecordTests.swift */; };
 		90001691295972180080137B /* NewStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000166A2951DDB20080137B /* NewStudentViewModel.swift */; };
 		90001692295972270080137B /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000167E29523E6B0080137B /* ViewModelFactory.swift */; };
-		90001693295973960080137B /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90001680295252E40080137B /* StudentListViewModel.swift */; };
 		900016942959739D0080137B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9000166C2951DDBF0080137B /* Student.swift */; };
 		90001695295973AE0080137B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90001674295221EE0080137B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +48,6 @@
 		90001674295221EE0080137B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		90001676295228AF0080137B /* StudentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListView.swift; sourceTree = "<group>"; };
 		9000167E29523E6B0080137B /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
-		90001680295252E40080137B /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
 		900016882959713B0080137B /* StudentBasicRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentBasicRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9000168A2959713B0080137B /* StudentBasicRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentBasicRecordTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +150,6 @@
 			children = (
 				9000166A2951DDB20080137B /* NewStudentViewModel.swift */,
 				9000167E29523E6B0080137B /* ViewModelFactory.swift */,
-				90001680295252E40080137B /* StudentListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90001681295252E40080137B /* StudentListViewModel.swift in Sources */,
 				9000167329521DD90080137B /* APIManager.swift in Sources */,
 				9000165F2951C2A20080137B /* NewStudentView.swift in Sources */,
 				9000166B2951DDB20080137B /* NewStudentViewModel.swift in Sources */,
@@ -291,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90001693295973960080137B /* StudentListViewModel.swift in Sources */,
 				90001692295972270080137B /* ViewModelFactory.swift in Sources */,
 				9000168B2959713B0080137B /* StudentBasicRecordTests.swift in Sources */,
 				90001695295973AE0080137B /* ImagePicker.swift in Sources */,

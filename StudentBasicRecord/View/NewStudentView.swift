@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewStudentView: View {
-  
-  @StateObject private var vm = NewStudentViewModel(viewModelFactory: ViewModelFactory())
+  @EnvironmentObject var viewModelFactory: ViewModelFactory
+  @StateObject private var vm = NewStudentViewModel()
   @State private var image: Image?
   @State private var inputImage: UIImage?
   @State var imagePath: String?
@@ -67,15 +67,15 @@ struct NewStudentView: View {
                  showingAlert = true
                }else {
                  showingAlert = false
+                 viewModelFactory.add(Student(name: vm.name, imageUrl: vm.imagePath!, mobileNumber: vm.mobileNumber))
                }
             })
-
           }, label: {
             Image(systemName: "plus")
           })
           .background(
             NavigationLink(
-              "Student", destination: StudentListView(viewModel: vm.makeToStudentListViewModel()),
+              "Student", destination: StudentListView(),
               isActive:$vm.showDetails
             )
           )
